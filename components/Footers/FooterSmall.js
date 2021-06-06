@@ -29,7 +29,7 @@ export default function FooterSmall(props) {
               <ul className="flex flex-wrap list-none md:justify-end  justify-center">
                 <li>
                   <a
-                    href="https://github.com/muhammaluth"
+                    href="https://github.com/muhammadluth"
                     target="_blank"
                     className="text-white hover:text-gray-400 text-sm font-semibold block py-1 px-3"
                   >

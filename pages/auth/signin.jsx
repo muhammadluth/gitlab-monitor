@@ -1,53 +1,3 @@
-// import React, { useEffect } from "react";
-// import { Formik, Field, Form } from "formik";
-// import { signIn } from "next-auth/client";
-
-// import Auth from "layouts/Auth.js";
-
-// export default function SignIn() {
-//   const handleSignIn = () => {
-//     signIn("credentials", {
-//       callbackUrl: `${window.location.origin}/admin/dashboard`,
-//     });
-//   };
-//   return (
-//     <>
-//       <div className="container mx-auto px-4 h-full">
-//         <div className="flex content-center items-center justify-center h-full">
-//           <div className="w-full lg:w-4/12 px-4">
-//             <div className="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-gray-300 border-0">
-//               <div className="rounded-t mb-0 px-6 py-6">
-//                 <div className="text-center mb-3">
-//                   <h6 className="text-gray-600 text-sm font-bold">Sign In</h6>
-//                 </div>
-//                 <hr className="mt-6 border-b-1 border-gray-400" />
-//               </div>
-//               <div className="flex-auto px-4 lg:px-10 py-10 pt-0">
-//                 <div className="text-center mt-6">
-//                   <button
-//                     className="bg-gray-900 text-white active:bg-gray-700 text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mb-1 w-full inline-flex items-center justify-center ease-linear transition-all duration-150"
-//                     type="button"
-//                     onClick={() => handleSignIn()}
-//                   >
-//                     <img
-//                       alt="..."
-//                       className="w-10 mr-1 fill-current"
-//                       src={require("assets/img/gitlab.svg")}
-//                     />
-//                     Sign In
-//                   </button>
-//                 </div>
-//               </div>
-//             </div>
-//           </div>
-//         </div>
-//       </div>
-//     </>
-//   );
-// }
-
-// SignIn.layout = Auth;
-
 import React, { useState } from "react";
 import { signIn } from "next-auth/client";
 
@@ -60,7 +10,7 @@ import Auth from "layouts/Auth.js";
 export default function SignIn() {
   const [isVisible, setIsVisible] = useState(false);
 
-  const handleShowPassword = () => {
+  const handleVisible = () => {
     setIsVisible((prev) => !prev);
   };
   return (
@@ -111,10 +61,10 @@ export default function SignIn() {
                               id="customCheckLogin"
                               type="checkbox"
                               className="form-checkbox text-gray-800 ml-1 w-5 h-5 ease-linear transition-all duration-150"
-                              onChange={handleShowPassword}
+                              onChange={handleVisible}
                             />
                             <span className="ml-2 text-sm font-semibold text-gray-700">
-                              Show Password
+                              Show Private Access Token
                             </span>
                           </label>
                         </div>

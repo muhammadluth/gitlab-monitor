@@ -13,14 +13,6 @@ export default function SignIn() {
   const handleVisible = () => {
     setIsVisible((prev) => !prev);
   };
-
-  // const handleSignIn = ({ values, setSubbiting }) => {
-  //   const { private_access_token } = values;
-  //   signIn("credentials", {
-  //     private_access_token,
-  //     callbackUrl: `${window.location.origin}/admin/dashboard`,
-  //   });
-  // };
   return (
     <>
       <div className="container mx-auto px-4 h-full">

@@ -1,7 +1,6 @@
 import CryptoJS from "crypto-js";
 
 export const AESEncrypt = (message) => {
-  console.log(message);
   if (message) {
     const encrypted = CryptoJS.AES.encrypt(
       message,

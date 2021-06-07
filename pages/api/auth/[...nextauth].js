@@ -4,11 +4,11 @@ import { AESEncrypt } from "utils/encrypt";
 
 export default NextAuth({
   secret: process.env.NEXT_PUBLIC_API_SECRET,
+  debug: false,
   session: {
     jwt: true,
   },
   pages: {
-    signOut: "/",
     error: "/",
   },
   providers: [
